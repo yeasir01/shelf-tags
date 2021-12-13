@@ -96,4 +96,4 @@ function noExtentionHandler() {
 };
 
 printBtn.addEventListener("click", handlePrint);
-document.getElementById("open").addEventListener("click", renderConfig);
+//document.getElementById("open").addEventListener("click", renderConfig);
