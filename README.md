@@ -5,5 +5,5 @@ An app for creating shelf tag pricing labels from your web browser.
 
 ![ScreenShot](./.github/assets/app.png)
 
-## Some
-![ScreenShot](./.github/assets/tag.jpeg)
+Tags Printed Using A Brother QL-820NW
+![ScreenShot](./.github/assets/tags.png)
