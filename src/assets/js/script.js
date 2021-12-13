@@ -35,7 +35,7 @@ async function handlePrint(e) {
             throw new Error('Invalid template path. Check your settings and try again.');
         }
         
-        //await BPAC.SetPrinter(config.printer);
+        await BPAC.SetPrinter(config.printer);
 
         if (isPromo) {
             const promoObj = await BPAC.GetObject("objPromo");
