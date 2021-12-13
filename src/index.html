@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>Turbo Tags</title>
+</head>
+
+<body>
+  <div class="modal" id="modal" data-show="false">
+    <div class="modal__dialog">
+      <span class="modal__close" id="modalClose">&#10005;</span>
+      <header class="modal__header"></header>
+      <main class="modal__body"></main>
+      <footer class="modal__footer"></footer>
+    </div>
+  </div>
+  <main class="grid">
+    <div class="grid__left">
+      <h1>Instructions</h1>
+      <p>
+        This web app is compabtable with chromium based web browsers that support the b-BAC
+        extention. It allows you to quickly & effeciently create
+        shelf tag pricing labels right from your browser.
+      </p>
+      <p>
+        <strong>STEP 1:</strong> Create a directory called "templates" in your C drive.
+        Your path should look like this "C:/templates". This is where you will need to store
+        all your premade shelf tag templates.
+      </p>
+      <p>
+        <strong>STEP 2:</strong> Download the two pre-made templates 
+        <a rel="noopener" href="https://www.google.com" target="_blank">Here</a> & 
+        place them in the directory you created. 
+        
+        Don't like the designs? The template layouts can be customized using 
+        Brothers Free P-Touch Editor software. Just make sure the property objects 
+        match the templates provided.
+      </p>
+      <p>
+        <strong>STEP 3:</strong> Download & install the google chrome extention by clicking 
+        print. Make sure the extention is enabled & reload your browser.
+      </p>
+      <p>
+        <strong>STEP 4:</strong> Start Printing!
+      </p>
+      <!-- <button id="open">Settings</button> -->
+    </div>
+    <div class="grid__right">
+      <form id="form" class="form">
+        <div class="form__group">
+          <label for="barcode">UPC-A</label>
+          <input id="barcode" name="barcode" type="number" required />
+        </div>
+        <div class="form__group">
+          <label for="brand">Brand</label>
+          <input id="brand" name="brand" type="text" required />
+        </div>
+        <div class="form__group">
+          <label for="subBrand">Sub Brand</label>
+          <input id="subBrand" name="subBrand" type="text" required />
+        </div>
+        <div class="form__group">
+          <label for="size">Size</label>
+          <input id="size" name="size" type="text" required />
+        </div>
+        <div class="form__group">
+          <label for="promo">Promo Message</label>
+          <input id="promo" name="promo" type="text" />
+        </div>
+        <div class="form__group">
+          <label for="price">Price</label>
+          <input id="price" name="price" type="number" min="0" max="1000.00" step="any" value="0.00" required />
+        </div>
+        <div class="form__group">
+          <label for="feeMessage">Fee Message</label>
+          <input id="feeMessage" name="feeMessage" type="text" />
+        </div>
+        <div class="form__col">
+          <div class="form__group">
+            <label for="copies">Copies</label>
+            <input id="copies" name="copies" type="number" min="1" max="99" value="1" required />
+          </div>
+        </div>
+        <button type="button" id="print">Print</button>
+      </form>
+    </div>
+  </main>
+  <template id='config'>
+    <form id="configForm" class="form">
+      <div class="form__group">
+        <label for="standardTemp">Standard Template</label>
+        <input id="standardTemp" name="standardTemp" type="file" required />
+      </div>
+      <div class="form__group">
+        <label for="promoTemp">Promo Template</label>
+        <input id="promoTemp" name="promoTemp" type="file" required />
+      </div>
+      <div class="form__group">
+        <label for="printer">Printer</label>
+        <select name="printer" id="">
+          <option value="Brother QL-800">Brother QL-800</option>
+          <option value="Brother QL-820NWB">Brother QL-820NWB</option>
+        </select>
+      </div>
+    </form>
+  </template>
+  <script type="module" src="./assets/js/script.js"></script>
+</body>
+</html>
